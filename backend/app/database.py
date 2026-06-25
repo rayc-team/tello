@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 # Замените параметры подключения на ваши актуальные данные MySQL
-DATABASE_URL = "mysql+pymysql://root:password@localhost:3306/podcast_db"
+DATABASE_URL = "mysql+pymysql://root:*<i51V7CEkgS@localhost:3306/podcast_db"
 
 engine = create_engine(
     DATABASE_URL,

@@ -124,3 +124,15 @@ backend/
 │       └── podcasts.py
 ├── requirements.txt
 └── docker-compose.yml  (опционально, для быстрого запуска MySQL)
+
+lib/
+├── main.dart
+├── services/
+│   └── api_service.dart
+├── providers/
+│   └── auth_provider.dart
+└── screens/
+    ├── login_screen.dart
+    ├── register_screen.dart
+    ├── main_screen.dart     (Заглушка для Слушателя)
+    └── admin_screen.dart    (Заглушка для Администратора)
