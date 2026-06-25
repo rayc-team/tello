@@ -6,7 +6,7 @@ from .database import get_db
 from .models import User
 from .config import SECRET_KEY, ALGORITHM
 
-# HTTPBearer автоматически генерирует поле ввода Bearer-токена в Swagger UI
+# HTTPBearer автоматически генерирует поле ввода Bearer-токена в Swagger UI!
 security_scheme = HTTPBearer()
 
 def get_current_user(

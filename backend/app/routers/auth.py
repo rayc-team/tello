@@ -11,7 +11,7 @@ router = APIRouter(prefix="/auth", tags=["Authentication"])
 
 @router.post("/register", response_model=UserResponse, status_code=status.HTTP_201_CREATED)
 def register(user_data: UserCreate, db: Session = Depends(get_db)):
-    # Проверяем, существует ли уже пользователь с таким email
+    # Проверяем, существует ли уже пользователь с таким email.
     db_user = db.query(User).filter(User.email == user_data.email).first()
     if db_user:
         raise HTTPException(
@@ -19,12 +19,12 @@ def register(user_data: UserCreate, db: Session = Depends(get_db)):
             detail="Пользователь с таким email уже зарегистрирован"
         )
 
-    # Создаем нового пользователя
+    # Создаем нового пользователя.
     hashed_pw = hash_password(user_data.password)
     new_user = User(
         email=user_data.email,
         hashed_password=hashed_pw,
-        role="listener"  # По умолчанию регистрируем с ролью Слушателя
+        role="listener"  # По умолчанию регистрируем с ролью Слушателя.
     )
     db.add(new_user)
     db.commit()
@@ -33,7 +33,7 @@ def register(user_data: UserCreate, db: Session = Depends(get_db)):
 
 @router.post("/login", response_model=Token)
 def login(user_data: UserLogin, db: Session = Depends(get_db)):
-    # Поиск пользователя
+    # Поиск пользователя.
     db_user = db.query(User).filter(User.email == user_data.email).first()
     if not db_user or not verify_password(user_data.password, db_user.hashed_password):
         raise HTTPException(
@@ -41,7 +41,7 @@ def login(user_data: UserLogin, db: Session = Depends(get_db)):
             detail="Неверный email или пароль"
         )
 
-    # Генерация JWT
+    # Генерация JWT.
     access_token = create_access_token(data={"sub": db_user.email, "role": db_user.role})
     return Token(access_token=access_token, role=db_user.role)
 

@@ -28,7 +28,7 @@ class PodcastResponse(BaseModel):
     title: str
     category: str
     description: Optional[str] = None
-    file_path: str  # Публичная ссылка на аудиофайл
+    file_path: str  # Публичная ссылка на аудиофайл.
     created_at: datetime
 
     class Config:

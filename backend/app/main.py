@@ -8,13 +8,13 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Podcast App API", version="1.0.0")
 
-# Автоматически создаем папку для сохранения файлов, если её нет
+# Автоматически создаем папку для сохранения файлов, если её нет.
 os.makedirs("uploads", exist_ok=True)
 
-# Монтируем раздачу статических файлов по адресу /static
+# Монтируем раздачу статических файлов по адресу /static.
 app.mount("/static", StaticFiles(directory="uploads"), name="static")
 
-# Подключаем роутеры
+# Подключаем роутеры.
 app.include_router(auth.router)
 app.include_router(podcasts.router)
 

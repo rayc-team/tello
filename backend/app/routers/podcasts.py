@@ -13,7 +13,7 @@ router = APIRouter(prefix="/podcasts", tags=["Podcasts"])
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-# 1. Публикация подкаста (Только для Администратора)
+# Публикация подкаста (только для роли `Администратора`).
 @router.post("/", response_model=PodcastResponse, status_code=status.HTTP_201_CREATED)
 async def create_podcast(
     title: str = Form(...),
@@ -23,25 +23,25 @@ async def create_podcast(
     db: Session = Depends(get_db),
     current_admin: User = Depends(get_current_admin)
 ):
-    # Проверка расширения файла (на сервере)
+    # Проверка расширения файла.
     if not file.filename.lower().endswith(".mp3"):
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Разрешены только файлы формата .mp3"
         )
     
-    # Проверка MIME-типа (на сервере)
+    # Проверка MIME-типа.
     if file.content_type != "audio/mpeg":
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Неверный MIME-тип. Разрешен только audio/mpeg"
         )
     
-    # Валидация размера файла (до 100 МБ)
+    # Валидация размера файла (до 100 МБ).
     if file.size is not None:
         file_size = file.size
     else:
-        # Резервный способ через прямое обращение к внутреннему файловому объекту
+        # Резервный способ через прямое обращение к внутреннему файловому объекту.
         file.file.seek(0, 2)
         file_size = file.file.tell()
         file.file.seek(0)
@@ -52,13 +52,13 @@ async def create_podcast(
             detail="Размер файла превышает лимит в 100 МБ"
         )
 
-    # Генерация уникального имени для исключения совпадений и сохранения анонимности путей
+    # Генерация уникального имени для исключения совпадений и сохранения анонимности путей.
     unique_filename = f"{uuid.uuid4().hex}.mp3"
     file_path = os.path.join(UPLOAD_DIR, unique_filename)
     
     try:
         with open(file_path, "wb") as buffer:
-            while content := await file.read(1024 * 1024):  # Чтение порциями по 1 МБ
+            while content := await file.read(1024 * 1024):  # Чтение порциями по 1 МБ.
                 buffer.write(content)
     except Exception:
         raise HTTPException(
@@ -66,7 +66,7 @@ async def create_podcast(
             detail="Не удалось сохранить файл на сервере"
         )
 
-    # Относительный путь, по которому файл будет доступен статически
+    # Относительный путь, по которому файл будет доступен статически.
     static_url = f"/static/{unique_filename}"
 
     new_podcast = Podcast(
@@ -80,7 +80,7 @@ async def create_podcast(
     db.refresh(new_podcast)
     return new_podcast
 
-# 2. Получение списка подкастов (Для всех авторизованных пользователей)
+# Получение списка подкастов (для всех авторизованных пользователей).
 @router.get("/", response_model=List[PodcastResponse])
 def list_podcasts(
     q: Optional[str] = None,
@@ -90,18 +90,18 @@ def list_podcasts(
 ):
     query = db.query(Podcast)
     
-    # Фильтрация по категории
+    # Фильтрация по категории.
     if category:
         query = query.filter(Podcast.category == category)
         
-    # Поиск по названию ( SQLAlchemy защищает от SQL-инъекций за счет параметризованных запросов )
+    # Поиск по названию ( SQLAlchemy защищает от SQL-инъекций за счет параметризованных запросов ).
     if q:
-        search_query = q[:255]  # Ограничение длины по ТЗ
+        search_query = q[:255]  # Ограничение длины запроса.
         query = query.filter(Podcast.title.ilike(f"%{search_query}%"))
         
     return query.all()
 
-# 3. Удаление подкаста (Только для Администратора)
+# Удаление подкаста (только для роли `Администратора`)
 @router.delete("/{podcast_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_podcast(
     podcast_id: int,
@@ -115,7 +115,7 @@ def delete_podcast(
             detail="Подкаст не найден"
         )
         
-    # Извлекаем имя файла и удаляем с физического диска
+    # Извлекаем имя файла и удаляем с физического диска.
     filename = os.path.basename(podcast.file_path)
     disk_path = os.path.join(UPLOAD_DIR, filename)
     
@@ -123,7 +123,7 @@ def delete_podcast(
         try:
             os.remove(disk_path)
         except Exception:
-            # Ошибка удаления физического файла не должна прерывать удаление записи из базы
+            # Ошибка удаления физического файла не должна прерывать удаление записи из базы.
             pass
 
     db.delete(podcast)
