@@ -1,0 +1,192 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="fG1LiNpWb7C3Kloxivef">
+    <mxGraphModel dx="848" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;@startuml\nleft to right direction\nskinparam defaultFontName \&quot;Arial\&quot;\nskinparam defaultFontSize 11\nskinparam actorStyle awesome\n\nskinparam usecase {\n    BackgroundColor White\n    BorderColor Black\n    ArrowColor Black\n}\nskinparam actor {\n    BackgroundColor White\n    BorderColor Black\n}\n\nactor \&quot;Незарегистрированный\\nпользователь\&quot; as Guest\nactor \&quot;Зарегистрированный\\nпользователь\&quot; as AuthUser\n\nactor \&quot;Слушатель\&quot; as Listener\nactor \&quot;Администратор\&quot; as Admin\n\n&#39; Наследование актеров (обобщение)\nAuthUser &lt;|-- Listener\nAuthUser &lt;|-- Admin\n\n&#39; Прецеденты общего назначения\nusecase \&quot;Регистрация в системе\&quot; as UC_Reg\nusecase \&quot;Авторизация в системе\&quot; as UC_Auth\nusecase \&quot;Выход из учетной записи\&quot; as UC_Logout\n\n&#39; Прецеденты каталога и медиа\nusecase \&quot;Просмотр каталога подкастов\&quot; as UC_Catalog\nusecase \&quot;Поиск по названию\&quot; as UC_Search\nusecase \&quot;Фильтрация по категориям\&quot; as UC_Filter\nusecase \&quot;Воспроизведение подкаста\&quot; as UC_Play\nusecase \&quot;Управление воспроизведением\\n(пауза, перемотка)\&quot; as UC_Control\n\n&#39; Прецеденты администратора\nusecase \&quot;Просмотр списка\\nпользователей\&quot; as UC_Users\nusecase \&quot;Публикация нового\\nподкаста\&quot; as UC_Publish\nusecase \&quot;Валидация и загрузка\\nMP3-файла\&quot; as UC_Validate\nusecase \&quot;Удаление подкаста\&quot; as UC_Delete\n\n&#39; Связи незарегистрированного пользователя\nGuest -- UC_Reg\n\n&#39; Связи зарегистрированного пользователя\nAuthUser -- UC_Auth\nAuthUser -- UC_Logout\n\n&#39; Связи каталога (доступны обоим через наследование)\nListener -- UC_Catalog\nAdmin -- UC_Catalog\nUC_Search .&gt; UC_Catalog : &lt;&lt;расширить&gt;&gt;\nUC_Filter .&gt; UC_Catalog : &lt;&lt;расширить&gt;&gt;\n\n&#39; Функционал слушателя\nListener -- UC_Play\nUC_Play .&gt; UC_Control : &lt;&lt;включить&gt;&gt;\n\n&#39; Функционал администратора\nAdmin -- UC_Users\nAdmin -- UC_Delete\nAdmin -- UC_Publish\nUC_Publish .&gt; UC_Validate : &lt;&lt;включить&gt;&gt;\n\n@enduml&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="gJnJ60tyL4vquDi9Ir0V-2">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_0" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-3">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="shape=umlActor;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="60" width="40" x="148" y="61.25" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Незарегистрированный&#xa;пользователь" plantUmlId="actorlbl_1" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=top;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Незарегистрированный&#xa;пользователь" id="gJnJ60tyL4vquDi9Ir0V-4">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="text;html=1;align=center;verticalAlign=top;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="17" width="268" x="34" y="119.25" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_2" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-5">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="shape=umlActor;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="60" width="40" x="439.6" y="59.25" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Зарегистрированный&#xa;пользователь" plantUmlId="actorlbl_3" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=top;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Зарегистрированный&#xa;пользователь" id="gJnJ60tyL4vquDi9Ir0V-6">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="text;html=1;align=center;verticalAlign=top;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="17" width="253" x="333.1" y="121.25" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_4" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-7">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="shape=umlActor;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="60" width="40" x="828.5" y="170.25" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Слушатель" plantUmlId="actorlbl_5" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=top;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Слушатель" id="gJnJ60tyL4vquDi9Ir0V-8">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="text;html=1;align=center;verticalAlign=top;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="17" width="77" x="810" y="240" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_6" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-9">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="shape=umlActor;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="60" width="40" x="827" y="315.25" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Администратор" plantUmlId="actorlbl_7" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=top;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Администратор" id="gJnJ60tyL4vquDi9Ir0V-10">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="text;html=1;align=center;verticalAlign=top;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="17" width="107" x="793.5" y="375.25" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Регистрация в системе" plantUmlId="uc_8" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Регистрация в системе" id="gJnJ60tyL4vquDi9Ir0V-11">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="41" width="182" x="369.2" y="164" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Авторизация в системе" plantUmlId="uc_9" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Авторизация в системе" id="gJnJ60tyL4vquDi9Ir0V-12">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="41" width="182" x="650" y="68.75" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Просмотр каталога подкастов" plantUmlId="uc_11" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Просмотр каталога подкастов" id="gJnJ60tyL4vquDi9Ir0V-14">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="50" width="224" x="348.2" y="230.25" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Поиск по названию" plantUmlId="uc_12" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Поиск по названию" id="gJnJ60tyL4vquDi9Ir0V-15">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="36" width="156" x="90" y="257" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Фильтрация по категориям" plantUmlId="uc_13" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Фильтрация по категориям" id="gJnJ60tyL4vquDi9Ir0V-16">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="45" width="203" x="62.5" y="300" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Воспроизведение подкаста" plantUmlId="uc_14" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Воспроизведение подкаста" id="gJnJ60tyL4vquDi9Ir0V-17">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="46" width="205" x="358" y="315.25" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Управление воспроизведением&lt;br&gt;(пауза, перемотка)" plantUmlId="uc_15" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Управление воспроизведением&lt;br&gt;(пауза, перемотка)" id="gJnJ60tyL4vquDi9Ir0V-18">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="58" width="268" x="326.5" y="410" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Просмотр списка&lt;br&gt;пользователей" plantUmlId="uc_16" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Просмотр списка&lt;br&gt;пользователей" id="gJnJ60tyL4vquDi9Ir0V-19">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="165" x="378.2" y="489.25" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Публикация нового&lt;br&gt;подкаста" plantUmlId="uc_17" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Публикация нового&lt;br&gt;подкаста" id="gJnJ60tyL4vquDi9Ir0V-20">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="187" x="367.3" y="576.25" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Валидация и загрузка&lt;br&gt;MP3-файла" plantUmlId="uc_18" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Валидация и загрузка&lt;br&gt;MP3-файла" id="gJnJ60tyL4vquDi9Ir0V-21">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="216" x="351.59999999999997" y="670" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Удаление подкаста" plantUmlId="uc_19" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" plantUmlBaseValue="Удаление подкаста" id="gJnJ60tyL4vquDi9Ir0V-22">
+          <mxCell parent="gJnJ60tyL4vquDi9Ir0V-2" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#000000;whiteSpace=wrap;fontColor=#000000;fontSize=11;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="36" width="158" x="388.25" y="740" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_20" plantUmlBaseStyle="endArrow=block;endFill=0;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-23">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" style="endArrow=block;endFill=0;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-5">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="850" y="270" as="sourcePoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_21" plantUmlBaseStyle="endArrow=block;endFill=0;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-24">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" style="endArrow=block;endFill=0;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-5">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="840" y="400" as="sourcePoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_22" plantUmlBaseStyle="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-25">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" style="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-11">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="170" y="160" as="sourcePoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_23" plantUmlBaseStyle="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-26">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" source="gJnJ60tyL4vquDi9Ir0V-5" style="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-12">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_25" plantUmlBaseStyle="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-28">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" style="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-14">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="850" y="270" as="sourcePoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_26" plantUmlBaseStyle="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-29">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" style="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-14">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="847" y="400" as="sourcePoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;&quot;расширить&quot;&lt;/b&gt;" plantUmlId="rel_27" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«расширить»" id="gJnJ60tyL4vquDi9Ir0V-30">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" source="gJnJ60tyL4vquDi9Ir0V-15" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-14">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;&quot;расширить&quot;&lt;/b&gt;" plantUmlId="rel_28" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«расширить»" id="gJnJ60tyL4vquDi9Ir0V-31">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" source="gJnJ60tyL4vquDi9Ir0V-16" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-14">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_29" plantUmlBaseStyle="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;exitX=0.5;exitY=1.37;exitPerimeter=0;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-32">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" style="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-17">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="850" y="270" as="sourcePoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;&quot;включить&quot;&lt;/b&gt;" plantUmlId="rel_30" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«включить»" id="gJnJ60tyL4vquDi9Ir0V-33">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" source="gJnJ60tyL4vquDi9Ir0V-17" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-18">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_31" plantUmlBaseStyle="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;exitX=0.5;exitY=1.37;exitPerimeter=0;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-34">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" source="gJnJ60tyL4vquDi9Ir0V-9" style="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;exitX=0.5;exitY=1.37;exitPerimeter=0;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-19">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_32" plantUmlBaseStyle="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;exitX=0.5;exitY=1.37;exitPerimeter=0;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-35">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" source="gJnJ60tyL4vquDi9Ir0V-9" style="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;exitX=0.5;exitY=1.37;exitPerimeter=0;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-22">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_33" plantUmlBaseStyle="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;exitX=0.5;exitY=1.37;exitPerimeter=0;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="gJnJ60tyL4vquDi9Ir0V-36">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" source="gJnJ60tyL4vquDi9Ir0V-9" style="endArrow=none;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;exitX=0.5;exitY=1.37;exitPerimeter=0;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-20">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;&quot;включить&quot;&lt;/b&gt;" plantUmlId="rel_34" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«включить»" id="gJnJ60tyL4vquDi9Ir0V-37">
+          <mxCell edge="1" parent="gJnJ60tyL4vquDi9Ir0V-2" source="gJnJ60tyL4vquDi9Ir0V-20" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#000000;fontColor=#000000;fontSize=11;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="gJnJ60tyL4vquDi9Ir0V-21">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
