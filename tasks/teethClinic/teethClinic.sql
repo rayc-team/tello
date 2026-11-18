@@ -23,14 +23,14 @@ CREATE TABLE services (
     price DECIMAL(10, 2) NOT NULL
 );
 
--- 4. Приёмы (расписание для админа, поле result — для врача)
+-- 4. Приёмы (расписание для админа, поле result - для врача)
 CREATE TABLE appointments (
     id INT AUTO_INCREMENT PRIMARY KEY,
     patient_id INT NOT NULL,
     doctor_id INT NOT NULL,
     appointment_time DATETIME NOT NULL,
     status VARCHAR(30) DEFAULT 'Запланирован', -- Запланирован, Завершен, Отменен
-    result TEXT NULL,                         -- Фиксация результатов врачом
+    result TEXT NULL,                       -- Фиксация результатов врачом
     FOREIGN KEY (patient_id) REFERENCES patients(id) ON DELETE CASCADE,
     FOREIGN KEY (doctor_id) REFERENCES doctors(id) ON DELETE CASCADE
 );
