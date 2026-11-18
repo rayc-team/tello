@@ -1422,11 +1422,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/aorayden/Study/systemCare/ExceptionalSituations/ExceptionalSituations.csproj",
+      "projectUniqueName": "/home/aorayden/Study/tello/tasks/ExceptionalSituations/ExceptionalSituations.csproj",
       "projectName": "ExceptionalSituations",
-      "projectPath": "/home/aorayden/Study/systemCare/ExceptionalSituations/ExceptionalSituations.csproj",
+      "projectPath": "/home/aorayden/Study/tello/tasks/ExceptionalSituations/ExceptionalSituations.csproj",
       "packagesPath": "/home/aorayden/.nuget/packages/",
-      "outputPath": "/home/aorayden/Study/systemCare/ExceptionalSituations/obj/",
+      "outputPath": "/home/aorayden/Study/tello/tasks/ExceptionalSituations/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/aorayden/.nuget/NuGet/NuGet.Config"
@@ -1494,7 +1494,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[9.0.21, 9.0.21]"
+            "version": "[9.0.22, 9.0.22]"
           }
         ],
         "frameworkReferences": {
@@ -1502,7 +1502,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.113/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.114/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

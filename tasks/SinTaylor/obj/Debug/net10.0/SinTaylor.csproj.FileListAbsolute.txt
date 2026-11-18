@@ -1,0 +1,15 @@
+/home/aorayden/Study/systemCare/SinTaylor/bin/Debug/net10.0/SinTaylor
+/home/aorayden/Study/systemCare/SinTaylor/bin/Debug/net10.0/SinTaylor.deps.json
+/home/aorayden/Study/systemCare/SinTaylor/bin/Debug/net10.0/SinTaylor.runtimeconfig.json
+/home/aorayden/Study/systemCare/SinTaylor/bin/Debug/net10.0/SinTaylor.dll
+/home/aorayden/Study/systemCare/SinTaylor/bin/Debug/net10.0/SinTaylor.pdb
+/home/aorayden/Study/systemCare/SinTaylor/obj/Debug/net10.0/SinTaylor.GeneratedMSBuildEditorConfig.editorconfig
+/home/aorayden/Study/systemCare/SinTaylor/obj/Debug/net10.0/SinTaylor.AssemblyInfoInputs.cache
+/home/aorayden/Study/systemCare/SinTaylor/obj/Debug/net10.0/SinTaylor.AssemblyInfo.cs
+/home/aorayden/Study/systemCare/SinTaylor/obj/Debug/net10.0/SinTaylor.csproj.CoreCompileInputs.cache
+/home/aorayden/Study/systemCare/SinTaylor/obj/Debug/net10.0/SinTaylor.sourcelink.json
+/home/aorayden/Study/systemCare/SinTaylor/obj/Debug/net10.0/SinTaylor.dll
+/home/aorayden/Study/systemCare/SinTaylor/obj/Debug/net10.0/refint/SinTaylor.dll
+/home/aorayden/Study/systemCare/SinTaylor/obj/Debug/net10.0/SinTaylor.pdb
+/home/aorayden/Study/systemCare/SinTaylor/obj/Debug/net10.0/SinTaylor.genruntimeconfig.cache
+/home/aorayden/Study/systemCare/SinTaylor/obj/Debug/net10.0/ref/SinTaylor.dll

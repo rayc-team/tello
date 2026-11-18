@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BeGbvhjJxXs=",
+  "success": true,
+  "projectFilePath": "/home/aorayden/Study/systemCare/Discontinuity12/Discontinuity12.csproj",
+  "expectedPackageFiles": [
+    "/home/aorayden/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.14/microsoft.aspnetcore.app.ref.10.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

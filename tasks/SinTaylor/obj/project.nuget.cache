@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "1+fy2Fh8OD8=",
+  "success": true,
+  "projectFilePath": "/home/aorayden/Study/systemCare/SinTaylor/SinTaylor.csproj",
+  "expectedPackageFiles": [
+    "/home/aorayden/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.14/microsoft.aspnetcore.app.ref.10.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

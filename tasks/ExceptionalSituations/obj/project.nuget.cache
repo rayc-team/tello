@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VfbJaymcPWw=",
+  "dgSpecHash": "TfnhmchqCkw=",
   "success": true,
-  "projectFilePath": "/home/aorayden/Study/systemCare/ExceptionalSituations/ExceptionalSituations.csproj",
+  "projectFilePath": "/home/aorayden/Study/tello/tasks/ExceptionalSituations/ExceptionalSituations.csproj",
   "expectedPackageFiles": [
     "/home/aorayden/.nuget/packages/avalonia/11.3.12/avalonia.11.3.12.nupkg.sha512",
     "/home/aorayden/.nuget/packages/avalonia.angle.windows.natives/2.1.25547.20250602/avalonia.angle.windows.natives.2.1.25547.20250602.nupkg.sha512",
@@ -32,7 +32,7 @@
     "/home/aorayden/.nuget/packages/skiasharp.nativeassets.win32/2.88.9/skiasharp.nativeassets.win32.2.88.9.nupkg.sha512",
     "/home/aorayden/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512",
     "/home/aorayden/.nuget/packages/tmds.dbus.protocol/0.21.2/tmds.dbus.protocol.0.21.2.nupkg.sha512",
-    "/home/aorayden/.nuget/packages/microsoft.netcore.app.host.linux-x64/9.0.21/microsoft.netcore.app.host.linux-x64.9.0.21.nupkg.sha512"
+    "/home/aorayden/.nuget/packages/microsoft.netcore.app.host.linux-x64/9.0.22/microsoft.netcore.app.host.linux-x64.9.0.22.nupkg.sha512"
   ],
   "logs": []
 }

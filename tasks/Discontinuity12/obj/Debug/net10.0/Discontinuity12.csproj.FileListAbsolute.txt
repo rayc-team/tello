@@ -1,0 +1,15 @@
+/home/aorayden/Study/systemCare/Discontinuity12/obj/Debug/net10.0/Discontinuity12.GeneratedMSBuildEditorConfig.editorconfig
+/home/aorayden/Study/systemCare/Discontinuity12/obj/Debug/net10.0/Discontinuity12.AssemblyInfoInputs.cache
+/home/aorayden/Study/systemCare/Discontinuity12/obj/Debug/net10.0/Discontinuity12.AssemblyInfo.cs
+/home/aorayden/Study/systemCare/Discontinuity12/obj/Debug/net10.0/Discontinuity12.csproj.CoreCompileInputs.cache
+/home/aorayden/Study/systemCare/Discontinuity12/obj/Debug/net10.0/Discontinuity12.sourcelink.json
+/home/aorayden/Study/systemCare/Discontinuity12/bin/Debug/net10.0/Discontinuity12
+/home/aorayden/Study/systemCare/Discontinuity12/bin/Debug/net10.0/Discontinuity12.deps.json
+/home/aorayden/Study/systemCare/Discontinuity12/bin/Debug/net10.0/Discontinuity12.runtimeconfig.json
+/home/aorayden/Study/systemCare/Discontinuity12/bin/Debug/net10.0/Discontinuity12.dll
+/home/aorayden/Study/systemCare/Discontinuity12/bin/Debug/net10.0/Discontinuity12.pdb
+/home/aorayden/Study/systemCare/Discontinuity12/obj/Debug/net10.0/Discontinuity12.dll
+/home/aorayden/Study/systemCare/Discontinuity12/obj/Debug/net10.0/refint/Discontinuity12.dll
+/home/aorayden/Study/systemCare/Discontinuity12/obj/Debug/net10.0/Discontinuity12.pdb
+/home/aorayden/Study/systemCare/Discontinuity12/obj/Debug/net10.0/Discontinuity12.genruntimeconfig.cache
+/home/aorayden/Study/systemCare/Discontinuity12/obj/Debug/net10.0/ref/Discontinuity12.dll

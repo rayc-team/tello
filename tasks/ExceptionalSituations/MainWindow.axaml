@@ -6,17 +6,14 @@
 
     <StackPanel Margin="10" Spacing="10">
 
-        <!-- Легенда цветов и статистика -->
         <StackPanel Orientation="Horizontal" Spacing="15">
             <TextBlock Text="Зеленый - свободно" Foreground="Green"/>
             <TextBlock Text="Красный - забронировано" Foreground="Red"/>
             <TextBlock x:Name="StatsText" Text="Свободно: 100 | Занято: 0"/>
         </StackPanel>
 
-        <!-- Сетка зала 10 на 10 -->
         <UniformGrid x:Name="HallGrid" Rows="10" Columns="10" Height="380"/>
 
-        <!-- Панель выбора ряда и места + кнопки -->
         <StackPanel Orientation="Horizontal" Spacing="10">
             <TextBlock Text="Ряд:" VerticalAlignment="Center"/>
             <TextBox x:Name="RowBox" Width="50"/>
@@ -28,7 +25,6 @@
             <Button Content="Отменить бронь" Click="Cancel_Click"/>
         </StackPanel>
 
-        <!-- Вывод результата: успешно ли прошла операция -->
         <TextBlock x:Name="StatusText" Text="Введите ряд и место"/>
 
     </StackPanel>
